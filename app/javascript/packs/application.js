@@ -13,6 +13,11 @@ import "bootstrap"
 
 import "../stylesheets/application" 
 
+import $ from "jquery";
+window.$ = $;
+window.jQuery = $;
+
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

@@ -1,0 +1,5 @@
+<%= link_to book_favorites_path(book), method: book.favorited_by?(current_user) ? :delete : :post, remote: true, id: "favorite-btn-#{book.id}", class: "favorite-button" do %>
+  <span class="<%= book.favorites.count > 0 ? 'text-danger' : 'text-primary' %>">
+    <%= book.favorites.count > 0 ? "❤️" : "💙" %> <span id="favorite-count-<%= book.id %>"><%= book.favorites.count %></span>
+  </span>
+<% end %>
